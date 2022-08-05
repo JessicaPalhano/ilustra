@@ -8,7 +8,7 @@
   --primary-color: hsl(36, 100%, 42%);
   --primary-color-hover: hsl(32, 100%, 79%);
   --paragraph: hsl(0, 0%, 81%);
-  --background: hsl(0, 0%, 20%);
+  --background: hsl(0, 0%, 5%);
 
   font-size: 62.5%; /* 1rem = 10px */
 }

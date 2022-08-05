@@ -1,0 +1,358 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: hsl(36, 100%, 42%);
+  --primary-color-hover: hsl(32, 100%, 79%);
+  --paragraph: hsl(0, 0%, 81%);
+  --background: hsl(0, 0%, 20%);
+
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: var(--background);
+  font-family: 'Quicksand';
+}
+
+.body-portfolio {
+  background-color: white;
+}
+
+.navigation {
+  background-color: var(--background);
+  height: 5rem;
+
+  animation-name: navigation-animacao;
+  animation-duration: 4s;
+}
+
+.portfolio {
+  background-color: black;
+}
+
+.navigation ul {
+  margin-top: 0rem;
+  list-style: none;
+  padding-left: 0rem;
+  text-align: right;
+  height: 5rem;
+}
+
+.navigation li {
+  display: inline-block;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  line-height: 5rem;
+  font-size: 1.8rem;
+}
+
+.navigation a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navigation a:hover {
+  color: var(--primary-color-hover);
+}
+
+.capa {
+  color: var(--paragraph);
+}
+
+.capa div {
+  display: inline-block;
+  height: 65rem;
+}
+
+.profile-pic {
+  width: 40%;
+  text-align: center;
+
+  animation-name: profile-animacao;
+  animation-duration: 2s;
+}
+
+.profile-pic img {
+  width: 35rem;
+  border-radius: 35rem;
+  margin-top: 10rem;
+}
+
+.profile-title {
+  vertical-align: top;
+  width: 59%;
+
+  animation-name: titulo-animacao;
+  animation-duration: 2s;
+}
+
+.profile-title h1 {
+  font-size: 6.2rem;
+  margin-top: 20rem;
+  line-height: 6rem;
+  font-family: 'WindSong';
+  color: var(--primary-color);
+  font-weight: 300;
+}
+
+.profile-title h2 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin-top: 2rem;
+  color: var(--paragraph);
+}
+
+.main {
+  padding: 4rem 18rem 8rem 10rem;
+
+  animation-name: conteudo;
+  animation-duration: 2s;
+}
+
+.cv-pic {
+  width: 35rem;
+  border-radius: 35rem;
+  float: right;
+  width: 28rem;
+  margin-left: 4rem;
+  margin-bottom: 4rem;
+}
+
+.main h1 {
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+  font-family: 'Quicksand';
+}
+
+.main h2 {
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin-top: 4rem;
+}
+
+.main h3 {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.main p {
+  color: var(--paragraph);
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 2.4rem;
+  text-align: justify;
+}
+
+.social-img {
+  width: 5rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.miniatura {
+  width: 32rem;
+  height: 32rem;
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  background-size: contain;
+  overflow: hidden;
+  border: var(--primary-color) solid 0.4rem;
+}
+
+.miniatura a {
+  text-decoration: none;
+}
+
+.blackbox {
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  opacity: 0;
+  padding-top: 12rem;
+
+  transition: 1s;
+}
+
+.blackbox:hover {
+  opacity: 0.7;
+  transition: 1s;
+}
+
+.blackbox-text {
+  text-align: center;
+}
+
+.blackbox-text h1 {
+  font-size: 1.6rem;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.blackbox-text h2 {
+  font-size: 1.6rem;
+  text-transform: none;
+  font-weight: 100;
+  margin-top: 0;
+}
+
+.foto-trabalhos {
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.navigation li.threeline-icon {
+  color: var(--primary-color);
+  display: none;
+}
+
+.navigation li.threeline-icon:hover {
+  color: var(--primary-color-hover);
+  cursor: pointer;
+}
+
+.back-link {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+}
+
+@keyframes profile-animacao {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes titulo-animacao {
+  0% {
+    opacity: 0;
+    transform: translate(0px, -20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes conteudo {
+  0% {
+    opacity: 0;
+    transform: translate(-20px, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes navigation-animacao {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1000px) {
+  .navigation li {
+    display: none;
+  }
+  .navigation li.threeline-icon {
+    display: inline-block;
+  }
+  .capa div {
+    display: block;
+    height: auto;
+  }
+
+  .profile-pic {
+    width: 100%;
+  }
+
+  .profile-pic img {
+    margin-top: 0px;
+    max-width: 80%;
+  }
+
+  .profile-title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .profile-title h1 {
+    margin: 30px;
+    font-size: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 48px;
+  }
+
+  .profile-title h2 {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+
+  .main {
+    padding: 10px 5% 40px 5%;
+  }
+
+  .main p {
+    text-align: left;
+  }
+
+  .cv-pic {
+    float: none;
+    max-width: 100%;
+    margin-right: 0px;
+  }
+
+  .miniatura {
+    max-width: 100%;
+    background-size: auto 100%;
+  }
+
+  .blackbox {
+    opacity: 0.6;
+  }
+
+  .menujs {
+    height: auto;
+  }
+
+  .menujs ul {
+    height: auto;
+    text-align: center;
+    padding-right: 15%;
+    padding-left: 15%;
+  }
+
+  .menujs li {
+    display: block;
+    border-bottom: solid grey 1px;
+    width: 100%;
+    padding: 0;
+  }
+}
